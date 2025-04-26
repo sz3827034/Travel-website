@@ -1,0 +1,60 @@
+/**
+ * @package 	WordPress
+ * @subpackage 	Travel Time
+ * @version 	1.0.2
+ * 
+ * WP-PostRating CSS Rules
+ * Created by CMSMasters
+ * 
+ */
+
+
+
+/*-------------------------------------------------------------------------
+
+	1. 	Global Styles
+	2. 	RTL Styles
+
+-------------------------------------------------------------------------*/
+
+
+/*-------------------------------------------------------------------------*/
+/*	1.	Main Styles */
+/*-------------------------------------------------------------------------*/
+
+.cmsmasters_rating {
+  font-size:0;
+  height:20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.cmsmasters_rating .post-ratings-loading {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+}
+
+.project_details_item_desc.cmsmasters_rating .post-ratings {
+  width: auto;
+  display: inline-block;
+}
+
+.project_details_item_desc.cmsmasters_rating .post-ratings-loading {
+  left: auto;
+  right: 0;
+}
+
+
+/*-------------------------------------------------------------------------*/
+/*	2. RTL Styles */
+/*-------------------------------------------------------------------------*/
+
+.rtl .project_details_item_desc.cmsmasters_rating .post-ratings-loading {
+  left: 0;
+  right: auto;
+}
