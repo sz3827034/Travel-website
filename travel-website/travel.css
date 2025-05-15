@@ -3,6 +3,8 @@ body, html {
     margin: 0;
     padding: 0;
     width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
   }
   
   .top-bar {
@@ -19,6 +21,16 @@ body, html {
   .navbar .nav-link:hover {
     color: #007bff;
   }
+  .travel-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .travel-content {
+    position: relative;
+    z-index: 1;
+  }
   .move i{
     position: relative;
     right: 170px;
@@ -27,45 +39,23 @@ body, html {
     position: relative;
     right: 165px;
   }
-  .hero {
-    background: url('dddh.jpg') no-repeat center center/cover;
-    height: 100vh;
-    position: relative;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .hero h1 {
-    font-size: 10rem;
-    position: relative;
-    right: 5%;
-  }
-  
-  .hero p {
+  .travel p {
     position: relative;
     bottom: 20px;
     opacity: 0.9;
     font-size: 2rem;
     letter-spacing: 3px;
   }
+
   
   @media (max-width: 768px) {
-    .hero {
+    .travel {
       height: 70vh;
     }
-    .hero h1 {
+    .travel h1 {
       font-size: 2.5rem;
     }
-    .hero p {
+    .travel p {
       font-size: 1rem;
     }
   }
@@ -76,14 +66,14 @@ body, html {
       text-align: center;
       gap: 5px;
     }
-    .hero {
+    .travel {
       height: 60vh;
     }
-    .hero h1 {
+    .travel h1 {
       font-size: 2rem;
     }
-    .hero p {
+    .travel p {
       font-size: 0.9rem;
     }
-  }
+}
   

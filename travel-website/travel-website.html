@@ -4,14 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Travel Time</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="travel.css">
-</head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .swiper {
+      width: 100%;
+      height: 100vh;
+    }
 
+    .swiper-slide {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card {
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      background-color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(6, 6, 6, 0.2);
+    }
+
+    .travel-content{
+      position: relative;
+      top: 350px;
+    }
+  .tour-section {
+    background: url('5384.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: white;
+  }
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .card-img-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  }
+
+  .price-tag {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .experience-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+</style>
+
+  </style>
+</head>
 <body>
 
-<div class="top-bar py-2">
+<div class="top-bar py-2 text-bg-primary">
   <div class="container d-flex justify-content-between align-items-center small">
     <div>
       <i class="bi bi-envelope"></i> example@travel.com
@@ -32,7 +103,7 @@
 
     <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
       <ul class="navbar-nav gap-3">
-        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link active text-primary" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Destinations</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Activities</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Tours</a></li>
@@ -43,20 +114,262 @@
     </div>
 
     <div class="d-none d-lg-flex align-items-center gap-2">
-        <a href="#" class="move"><i class="bi bi-search"></i></a>
-        <a href="#" class="move2"><i class="bi bi-bag"></i></a>
-      </div>      
+      <a href="#" class="move fs-4 "><i class="bi bi-search text-dark"></i></a>
+      <a href="#" class="move2 fs-4"><i class="bi bi-bag text-dark"></i></a>
+    </div>      
   </div>
 </nav>
 
-<section class="hero d-flex align-items-center justify-content-center text-center">
-  <div class="hero-overlay"></div>
-  <div class="hero-content text-white">
-    <h1 class="display-4">Caribbean</h1>
-    <p class="lead mt-3">UNFORGETTABLE JOURNEY</p>
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide" style="background-image: url('dddh.jpg');">
+      <div class="travel-overlay"></div>
+      <div class="travel-content text-white text-center">
+        <h1 class="display-1">Caribbean</h1>
+        <p class="lead mt-4">UNFORGETTABLE JOURNEY</p>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+      <div class="travel-overlay"></div>
+      <div class="travel-content text-white text-center">
+        <h1 class="display-1">Mountains</h1>
+        <p class="lead mt-3">ADVENTURE AWAITS</p>
+      </div>
+    </div>
+    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+      <div class="travel-overlay"></div>
+      <div class="travel-content text-white text-center">
+        <h1 class="display-1">City Tours</h1>
+        <p class="lead mt-3">EXPLORE THE STREETS</p>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+
+<section class="search-bar py-5 bg-light">
+  <div class="container">
+    <div class="row g-3">
+      <div class="col-md-3">
+        <input type="text" class="form-control" placeholder="Enter keywords">
+      </div>
+      <div class="col-md-3">
+        <select class="form-select">
+          <option selected>All categories</option>
+          <option>Adventure</option>
+          <option>Beach</option>
+          <option>City</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <input type="number" class="form-control" placeholder="Min ($)" value="0">
+      </div>
+      <div class="col-md-2">
+        <input type="number" class="form-control" placeholder="Max ($)" value="10000">
+      </div>
+      <div class="col-md-2 d-grid">
+        <button class="btn btn-success">Search Adventure</button>
+      </div>
+    </div>
   </div>
 </section>
 
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="mb-3 fw-normal">Top destinations in Caribbean</h1>
+    <p class="text-muted mb-5">EXPLORE A DIFFERENT WAY TO TRAVEL</p>
+  </div>
+  
+  <div class="row g-5"> 
+
+    <div class="col-md-3">
+      <div class="card">
+        <div class="img"></div>
+        <img src="7-1-580x378.jpg" class="card-img-top" alt="Grenadines">
+      </div>
+        <div class="card-body text-center hover-shade">
+          <h5 class="card-title text-center py-2">The Grenadines</h5>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="5-1-580x378.jpg" class="card-img-top" alt="Barbados">
+      </div>
+        <div class="card-body">
+          <h5 class="card-title text-center py-2">Barbados</h5>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="snorkeling1.jpg" class="card-img-top" alt="Virgin Islands">
+      </div>
+        <div class="card-body">
+          <h5 class="card-title text-center py-2">Virgin Islands</h5>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="card">
+        <img src="istockphoto-659140034-612x612.webp" class="card-img-top" alt="Cuba">
+      </div>
+        <div class="card-body">
+          <h5 class="card-title text-center py-2">Republic of Cuba</h5>
+        </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="tour-section py-5">
+  <div class="container">
+  <div class="text-center mb-5">
+    <h1 class="fw-light display-3">Top tour packages</h1>
+    <p class="text-uppercase">Explore a different way to travel</p>
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow">
+        <div class="position-relative">
+          <img src="2-3-580x378.jpg" class="card-img-top" alt="Caribbean">
+          <div class="price-tag">$120</div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <div class="small text-white">Courses & Classes</div>
+            <h5 class="card-title text-white">Caribbean Cooking<br>Experience in Dominica</h5>
+          </div>
+        </div>
+        <div class="card-body text-dark">
+          <p>Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide will enrich your experience.</p>
+          <div class="d-flex justify-content-between">
+            <small>4 HOURS</small>
+            <small>1-9 PERSONS</small>
+            <div>⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow">
+        <div class="position-relative">
+          <img src="1-3-580x378.jpg" class="card-img-top" alt="Caribbean">
+          <div class="price-tag">$1100</div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <div class="small text-white">Nature & Wildlife</div>
+            <h5 class="card-title text-white">Cousta Rica Adventure</h5>
+          </div>
+        </div>
+        <div class="card-body text-dark">
+          <p>Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide will enrich your experience.</p>
+          <div class="d-flex justify-content-between">
+            <small>8 Days</small>
+            <small>1-12 PERSONS</small>
+            <div>⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card border-0 shadow">
+        <div class="position-relative">
+          <img src="8-1-580x378.jpg" class="card-img-top" alt="Caribbean">
+          <div class="price-tag">$180</div>
+          <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <div class="small text-white">Boating & Cruies</div>
+            <h5 class="card-title text-white">Galapagos Island On Belunga</h5>
+          </div>
+        </div>
+        <div class="card-body text-dark">
+          <p>Whether you're hiking a forest trail or whale watching, the local insight you'll get from a guide will enrich your experience.</p>
+          <div class="d-flex justify-content-between">
+            <small>4 HOURS</small>
+            <small>1-8 PERSONS</small>
+            <div>⭐⭐⭐⭐⭐</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="container py-5 text-center">
+  <h2 class="fw-bold">Most popular experiences</h2>
+  <p class="text-muted">Explore a different way to travel</p>
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('diving.jpg');">
+        <div class="fs-4">Diving</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('white-sands.jpg');">
+        <div class="fs-4">White Sands</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('family-fun.jpg');">
+        <div class="txt fs-4">Family Fun</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('7-1-580x378.jpg');">
+        <div class="fs-4">Old Colonial Towns</div>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('download\ \(1\).jpeg');">
+        <div class="fs-4">Romantic Getaway</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('snorkeling1.jpg');">
+        <div class="fs-4">Snorkeling</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('beautifuk-scenery.jpg');">
+        <div class="fs-4">Beautiful Scenery</div>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+      <div class="experience-card" style="background-image: url('outdoor-adventure.jpg');">
+        <class class="fs-4">Outdoor Adventure</class>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    effect : 'simple',
+  });
+</script>
 </body>
 </html>
