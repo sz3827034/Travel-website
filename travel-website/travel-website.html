@@ -29,6 +29,7 @@
     .card:hover {
       transform: translateY(-10px);
       box-shadow: 0 10px 20px rgba(6, 6, 6, 0.2);
+      cursor: pointer;
     }
 
     .travel-content{
@@ -65,8 +66,8 @@
   .experience-card {
       position: relative;
       overflow: hidden;
-      border-radius: 10px;
       height: 180px;
+      border-radius: 5%;
       background-size: cover;
       background-position: center;
       display: flex;
@@ -76,9 +77,19 @@
       font-weight: bold;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     }
+    .box{
+      transition: transform 0.1s ease;
+      overflow: hidden;
+    }
+    .box:hover{
+      transform: translateY(-10px);
+      cursor: pointer;
+    }
+    .card-head{
+      position: relative;
+      bottom: 100px;
+    }
 </style>
-
-  </style>
 </head>
 <body>
 
@@ -130,14 +141,14 @@
         <p class="lead mt-4">UNFORGETTABLE JOURNEY</p>
       </div>
     </div>
-    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');">
+    <div class="swiper-slide" style="background-image: url('Caribbean_Sea_Beach_D.webp');">
       <div class="travel-overlay"></div>
       <div class="travel-content text-white text-center">
         <h1 class="display-1">Mountains</h1>
         <p class="lead mt-3">ADVENTURE AWAITS</p>
       </div>
     </div>
-    <div class="swiper-slide" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+    <div class="swiper-slide" style="background-image: url('MCE-26334-DEST-Eastern-Caribbean-Main_Saint-Lucia.jpg');">
       <div class="travel-overlay"></div>
       <div class="travel-content text-white text-center">
         <h1 class="display-1">City Tours</h1>
@@ -306,49 +317,72 @@
   <p class="text-muted">Explore a different way to travel</p>
   <div class="row g-4 justify-content-center">
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('diving.jpg');">
-        <div class="fs-4">Diving</div>
+      <div class="box">
+       <div class="experience-card">
+         <img src="diving.jpg" alt="diving">
+       </div>
+       <h3 class="card-head text-white text-bold">Diving</h3>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('white-sands.jpg');">
-        <div class="fs-4">White Sands</div>
+      <div class="box">
+       <div class="experience-card">
+         <img src="white-sands.jpg" alt="white-sands">
+       </div>
+         <h3 class="card-head text-white text-bold">White Sand</h3>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('family-fun.jpg');">
-        <div class="txt fs-4">Family Fun</div>
+      <div class="box">
+       <div class="experience-card">
+         <img src="family-fun.jpg" alt="family-fun">
+       </div>
+         <h3 class="card-head text-white text-bold">Family Fun</h3>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('7-1-580x378.jpg');">
-        <div class="fs-4">Old Colonial Towns</div>
+      <div class="box">
+       <div class="experience-card">
+        <img src="7-1-580x378.jpg" alt="Old clonial towns">
+       </div>
+         <h3 class="card-head text-white text-bold">Old clonial towns</h3>
       </div>
     </div>
 
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('download\ \(1\).jpeg');">
-        <div class="fs-4">Romantic Getaway</div>
+      <div class="box">
+       <div class="experience-card">
+         <img src="havana-2.jpg" alt="romantic gateway">
+       </div>
+         <h3 class="card-head text-white text-bold">Romantic Gateway</h3>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('snorkeling1.jpg');">
-        <div class="fs-4">Snorkeling</div>
+      <div class="box">
+       <div class="experience-card">
+        <img src="snorkeling1.jpg" alt="snokerling">
+       </div>
+         <h3 class="card-head text-white text-bold">Snokerling</h3>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('beautifuk-scenery.jpg');">
-        <div class="fs-4">Beautiful Scenery</div>
+      <div class="box">
+       <div class="experience-card">
+        <img src="beautifuk-scenery.jpg" alt="scenery">
+       </div>
+         <h3 class="card-head text-white text-bold">Beautiful Scenery</h3>
       </div>
     </div>
     <div class="col-md-3 col-sm-6">
-      <div class="experience-card" style="background-image: url('outdoor-adventure.jpg');">
-        <class class="fs-4">Outdoor Adventure</class>
+      <div class="box">
+       <div class="experience-card">
+        <img src="outdoor-adventure.jpg" alt="outdoor-adventure">
+       </div>
+         <h3 class="card-head text-white text-bold">Outdoor Adventure</h3>
       </div>
     </div>
   </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
@@ -368,7 +402,7 @@
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    effect : 'simple',
+    effect : 'cube',
   });
 </script>
 </body>
