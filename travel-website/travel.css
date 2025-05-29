@@ -46,7 +46,6 @@ body, html {
     font-size: 2rem;
     letter-spacing: 3px;
   }
-
   
   @media (max-width: 768px) {
     .travel {
@@ -76,4 +75,3 @@ body, html {
       font-size: 0.9rem;
     }
 }
-  
